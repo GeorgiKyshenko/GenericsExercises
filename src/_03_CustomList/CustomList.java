@@ -28,6 +28,14 @@ public class CustomList<T extends Comparable<T>> {
         Collections.swap(values, index, replaceIndex);
     }
 
+    public int size() {
+        return values.size();
+    }
+
+    public T get(int index) {
+        return values.get(index);
+    }
+
     public long countGreaterThan(T element) {
         return values.stream().filter(el -> el.compareTo(element) > 0).count();
     }
